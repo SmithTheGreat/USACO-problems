@@ -3,22 +3,43 @@ import java.util.*;
 public class CowCollegeBronze2022 {
     public static void main(String[] args) {
          Scanner sc = new Scanner(System.in);
-         System.out.println("N: ");
-         long n = sc.nextLong();
-        long[] price = new long[n];
-        long maxPrice = 0;
-        long tuitionEarned = 0;
-        long i=0;
-        long max = 0;
-long l = 0;
-while(l>n) {
+         
+         int n = sc.nextInt();
+        int[] price = new int[n];
+        int maxPrice = 0;
+        int tuitionEarned = 0;
+        int i=0;
+        int max = 0;
+System.out.println("");
+char l = 0;
+while (i<n) {
+price[i] = sc.nextInt();
+}
+i=0;
+while(l<n) {
 if (price[l]>max) {
 max = price[l];
 }
 l++
 }
-        while (i>n) {
-           
+int cows1 = 0;
+int cows = 0;
+i=0;
+int realMaxPrice = 0;
+        
+           while (maxPrice =< max) {
+while (int i<n) {
+if (maxPrice<=price[i]) {
+cows++;
 }
+if (cows*maxPrice>realMaxPrice) {
+realMaxPrice = maxPrice;
+cows1 = cows;
+
+}
+}
+}
+tuitionEarned = cows1*realMaxPrice;
+System.out.printf("%d"+"%d",tuitionEarned,realMaxPrice);
 }
 }
