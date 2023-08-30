@@ -37,6 +37,7 @@ public class CowCollegeBronze2022 {
              realMaxPrice = maxPrice;
              cows1 = cows;
             }
+             cows = 0;
         }
         tuitionEarned = (int)cows1*(int)realMaxPrice;
         System.out.printf("%d"+" "+"%d",tuitionEarned,(int)realMaxPrice);
