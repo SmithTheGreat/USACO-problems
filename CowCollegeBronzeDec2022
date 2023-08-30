@@ -10,23 +10,23 @@ public class CowCollegeBronze2022 {
         int tuitionEarned = 0;
         int i=0;
         int max = 0;
-        System.out.println("");
+       
         int l = 0;
-        while (i<n) {
+        for (i=0;i<n;i++) {
             price[i] = sc.nextInt();
-            i++;
+            
         }
-        i=0;
-        while(l<n) {
-            if (price[l]>max) {
-                max = price[l];
+       
+        for(i=0;i<n;i++) {
+            if (price[i]>max) {
+                max = price[i];
             }
-        l++;
+        
         }
-        char cows1 = 0;
-        char cows = 0;
+        intcows1 = 0;
+        int cows = 0;
         i=0;
-        char realMaxPrice = 0;
+        int realMaxPrice = 0;
         
         while (maxPrice <= max) {
             while (i < n) {
