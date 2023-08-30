@@ -6,12 +6,11 @@ public class CowCollegeBronze2022 {
          
          int n = sc.nextInt();
         int[] price = new int[n];
-        char maxPrice = 0;
         int tuitionEarned = 0;
         int i=0;
         int max = 0;
        
-        int l = 0;
+        
         for (i=0;i<n;i++) {
             price[i] = sc.nextInt();
             
@@ -23,21 +22,20 @@ public class CowCollegeBronze2022 {
             }
         
         }
-        intcows1 = 0;
+        int cows1 = 0;
         int cows = 0;
         i=0;
         int realMaxPrice = 0;
         
-        while (maxPrice <= max) {
-            while (i < n) {
+        for (int maxPrice = 1; !(maxPrice > max);maxPrice++) {
+            for (i = 0; i < n; i++) {
                 if (maxPrice<=price[i]) {
                     cows++;
                 }
-                if (cows*maxPrice>realMaxPrice) {
-                realMaxPrice = maxPrice;
-                    cows1 = cows;
-
-                }
+              }
+             if (cows*maxPrice>realMaxPrice) {
+             realMaxPrice = maxPrice;
+             cows1 = cows;
             }
         }
         tuitionEarned = (int)cows1*(int)realMaxPrice;
