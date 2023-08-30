@@ -33,12 +33,12 @@ public class CowCollegeBronze2022 {
                     cows++;
                 }
               }
-             if (cows*maxPrice>realMaxPrice) {
+             if (cows*maxPrice>realMaxPrice*cows1) {
              realMaxPrice = maxPrice;
              cows1 = cows;
             }
         }
         tuitionEarned = (int)cows1*(int)realMaxPrice;
-        System.out.printf("%d"+"%d",tuitionEarned,(int)realMaxPrice);
+        System.out.printf("%d"+" "+"%d",tuitionEarned,(int)realMaxPrice);
 }
 }
