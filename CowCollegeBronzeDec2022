@@ -10,37 +10,37 @@ public class CowCollegeBronze2022 {
         int tuitionEarned = 0;
         int i=0;
         int max = 0;
-System.out.println("");
-int l = 0;
-while (i<n) {
-price[i] = sc.nextInt();
-i++;
-}
-i=0;
-while(l<n) {
-if (price[l]>max) {
-max = price[l];
-}
-l++;
-}
-char cows1 = 0;
-char cows = 0;
-i=0;
-char realMaxPrice = 0;
+        System.out.println("");
+        int l = 0;
+        while (i<n) {
+            price[i] = sc.nextInt();
+            i++;
+        }
+        i=0;
+        while(l<n) {
+            if (price[l]>max) {
+                max = price[l];
+            }
+        l++;
+        }
+        char cows1 = 0;
+        char cows = 0;
+        i=0;
+        char realMaxPrice = 0;
         
-           while (maxPrice <= max) {
-while (i < n) {
-if (maxPrice<=price[i]) {
-cows++;
-}
-if (cows*maxPrice>realMaxPrice) {
-realMaxPrice = maxPrice;
-cows1 = cows;
+        while (maxPrice <= max) {
+            while (i < n) {
+                if (maxPrice<=price[i]) {
+                    cows++;
+                }
+                if (cows*maxPrice>realMaxPrice) {
+                realMaxPrice = maxPrice;
+                    cows1 = cows;
 
-}
-}
-}
-tuitionEarned = (int)cows1*(int)realMaxPrice;
-System.out.printf("%d"+"%d",tuitionEarned,(int)realMaxPrice);
+                }
+            }
+        }
+        tuitionEarned = (int)cows1*(int)realMaxPrice;
+        System.out.printf("%d"+"%d",tuitionEarned,(int)realMaxPrice);
 }
 }
