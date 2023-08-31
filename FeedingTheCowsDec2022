@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class FeedingTheCowsDec2022 {
+  public static void main(String[] args) {
+    Scanner numbers = new Scanner(System.in);
+    Scanner string = new Scanner(System.in);
+    int times = sc.nextInt();
+    int numOfCows;
+    int cowMove;
+    
+    for (int i=0;i<times;i++) {
+      numOfCows = numbers.nextInt();
+      cowMove = numbers.nextInt();
+      String[] cows = new String[numOfCows];
+      String cow = string.nextLine();
+      String[] patches = new String[numOfCows];
+      for (int l=0; l<numOfCows;l++) {
+        if (cow.charAt[l] == 'G') {
+          cows[l] = "G";
+          patches[l] = ".";
+        } 
+        else {
+          cows[l] = "H";
+          patches[l] = ".";
+        }
+      }
+      modifyArray(patches[],cowMove,cows[],numOfCows);
+      
+    }
+  }
+
+  public static void modifyArray(String[] patches,int cowMove,String[] cows,int numOfCows) {
+    int patch = 0;
+    char cow;
+      cow = cow[0];
+    for(int i = 0; i<numOfCows; i++){
+        cow=cows[i];
+        
+            if(!(i-cowMove<0)){
+  
+                for (int l = i-cowMove;!(l>i+cowMove);l++) {
+                  if (patches[l] == cow) {
+                    patch++;
+                  }
+                }
+              if (patch == 0) {
+                patches[i-cowMove] = "G"
+             }
+            }
+        }
+      }
+  
+}
