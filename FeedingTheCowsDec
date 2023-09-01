@@ -1,0 +1,82 @@
+import java.util.*;
+public class FeedingTheCowsDec {
+  public static void main(String[] args) {
+    Scanner numbers = new Scanner(System.in);
+    Scanner string = new Scanner(System.in);
+    int times = numbers.nextInt();
+    int numOfCows;
+    int cowMove;
+    
+    for (int i=0;i<times;i++) {
+      numOfCows = numbers.nextInt();
+      cowMove = numbers.nextInt();
+      char[] cows = new char[numOfCows];
+      String cow = string.nextLine();
+      char[] patches = new char[numOfCows];
+      for (int l=0; l<numOfCows;l++) {
+        if (cow.charAt[l] == 'G') {
+          cows[l] = 'G';
+          patches[l] = '.';
+        } 
+        else {
+          cows[l] = 'H';
+          patches[l] = '.';
+        }
+      }
+      modifyArray(patches,cows,cowMove,numOfCows);
+      for(int p=0;p<numOfCows;p++) {
+        System.out.print(patches[p]);
+      }
+    }
+  }
+  public static void modifyArray(char[] patches, char[] cows,int cowMove,int numOfCows) {
+    int w = 0;
+    int patch = 0;
+    char cowType;
+    cowType = cows[0];
+    patches[cowMove] = cowType;
+    if(numOfCows-1>(2*cowMove)||(!(numOfCows-1==(2*cowMove))&&(!(cows[numOfCows]==cowType)))){
+      cowType=cows[numOfCows-1];
+      int num = numOfCows-1-cowMove;
+      patches[num] = cowType;
+    }
+    for(int i = 0; i<numOfCows; i++){
+        cowType=cows[i];
+        patch = 0;
+        
+            if(!(i+cowMove>(numOfCows-1))){
+  
+                for (int l = i-cowMove;!(l>i+cowMove);l++) {
+                  if (patches[l] == cowType) {
+                    patch++;
+                  }
+                }
+              if (patch == 0 && patches[i+cowMove]='.') {
+                patches[i+cowMove] = cowType;
+             }
+              else if(patch == 0 && patches[i+cowMove-1] = '.'){
+                patches[i+cowMove-1] = cowType;
+              }
+            }
+            else {
+              for (int m = i-cowMove;!(m>numOfCows);m++) {
+                  if (patches[m] == cowType) {
+                    patch++;
+                  }
+                }
+              if (patch == 0 && patches[i-cowMove]='.') {
+                patches[i-cowMove] = cowType;
+             }
+              else {
+                while(patch == 0 && !(w>cowMove)) {
+                  if(patch == 0 && patches[i-cowMove+w] = '.'){
+                    patches[i-cowMove+w] = cowType;
+                    patch++;
+                  }
+                  w++;
+                }
+              }
+            }
+        }
+      }
+}
