@@ -30,22 +30,52 @@ public class FeedingTheCowsDec2022 {
   }
 
   public static void modifyArray(String[] patches,int cowMove,String[] cows,int numOfCows) {
+    int w = 0;
     int patch = 0;
-    char cow;
-      cow = cow[0];
+    char cowType;
+    cowType = cows[0];
+    patches[cowMove] = cow;
+    if(numOfCows-1>(2*cowMove)||(!(numOfCows-1==(2*cowMove))&&(!(cows[numOfCows]==cowType))){
+      cowType=cows[numOfCows-1];
+      int num = numOfCows-1-cowMove;
+      patches[num] = cowType;
+    }
     for(int i = 0; i<numOfCows; i++){
-        cow=cows[i];
+        cowType=cows[i];
+        patch = 0;
         
-            if(!(i-cowMove<0)){
+            if(!(i+cowMove>(numOfCows-1))){
   
                 for (int l = i-cowMove;!(l>i+cowMove);l++) {
-                  if (patches[l] == cow) {
+                  if (patches[l] == cowType) {
                     patch++;
                   }
                 }
-              if (patch == 0) {
-                patches[i-cowMove] = "G"
+              if (patch == 0 && patches[i+cowMove]='.') {
+                patches[i+cowMove] = cowType;
              }
+              else if(patch == 0 && patches[i+cowMove-1] = '.'){
+                patches[i+cowMove-1] = cowType;
+              }
+            }
+            else {
+              for (int m = i-cowMove;!(m>numOfCows);m++) {
+                  if (patches[m] == cowType) {
+                    patch++;
+                  }
+                }
+              if (patch == 0 && patches[i-cowMove]='.') {
+                patches[i-cowMove] = cowType;
+             }
+              else {
+                while(patch == 0 && !(w>cowMove) {
+                  if(patch == 0 && patches[i-cowMove+w] = '.'){
+                    patches[i-cowMove+w] = cowType;
+                    patch++;
+                  }
+                  w++;
+                }
+              }
             }
         }
       }
