@@ -24,18 +24,20 @@ public class FeedingTheCowsDec2022 {
           patches[l] = ".";
         }
       }
-      modifyArray(patches[],cowMove,cows[],numOfCows);
-      
+      modifyArray(patches[],cows[],cowMove,numOfCows);
+      for(int p=0;p<numOfCows;p++) {
+        System.out.print(patches[p]);
+      }
     }
   }
 
-  public static void modifyArray(String[] patches,int cowMove,String[] cows,int numOfCows) {
+  public static void modifyArray(String[] patches, String[] cows,int cowMove,int numOfCows) {
     int w = 0;
     int patch = 0;
     char cowType;
     cowType = cows[0];
     patches[cowMove] = cow;
-    if(numOfCows-1>(2*cowMove)||(!(numOfCows-1==(2*cowMove))&&(!(cows[numOfCows]==cowType))){
+    if(numOfCows-1>(2*cowMove)||(!(numOfCows-1==(2*cowMove))&&(!(cows[numOfCows]==cowType)))){
       cowType=cows[numOfCows-1];
       int num = numOfCows-1-cowMove;
       patches[num] = cowType;
@@ -68,7 +70,7 @@ public class FeedingTheCowsDec2022 {
                 patches[i-cowMove] = cowType;
              }
               else {
-                while(patch == 0 && !(w>cowMove) {
+                while(patch == 0 && !(w>cowMove)) {
                   if(patch == 0 && patches[i-cowMove+w] = '.'){
                     patches[i-cowMove+w] = cowType;
                     patch++;
