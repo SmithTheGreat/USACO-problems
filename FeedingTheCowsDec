@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class FeedingTheCowsDec {
+public class FeedingTheCowsDec2022 {
   public static void main(String[] args) {
     Scanner numbers = new Scanner(System.in);
     Scanner string = new Scanner(System.in);
@@ -8,14 +8,15 @@ public class FeedingTheCowsDec {
     int numOfCows;
     int cowMove;
     
+    String cowTypes;
     for (int i=0;i<times;i++) {
       numOfCows = numbers.nextInt();
       cowMove = numbers.nextInt();
       char[] cows = new char[numOfCows];
-      String cow = string.nextLine();
+      cowTypes = string.nextLine();
       char[] patches = new char[numOfCows];
       for (int l=0; l<numOfCows;l++) {
-        if (cow.charAt(l) == 'G') {
+        if (cowTypes.charAt(l) == 'G') {
           cows[l] = 'G';
           patches[l] = '.';
         } 
