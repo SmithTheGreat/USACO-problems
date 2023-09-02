@@ -15,7 +15,7 @@ public class FeedingTheCowsDec {
       String cow = string.nextLine();
       char[] patches = new char[numOfCows];
       for (int l=0; l<numOfCows;l++) {
-        if (cow.charAt[l] == 'G') {
+        if (cow.charAt(l) == 'G') {
           cows[l] = 'G';
           patches[l] = '.';
         } 
