@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class FeedingTheCowsDec2022 {
+public class FeedingTheCowsDec {
   public static void main(String[] args) {
     Scanner numbers = new Scanner(System.in);
     Scanner string = new Scanner(System.in);
