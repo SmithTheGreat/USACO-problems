@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class ReverseEngineeringDec2022 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+   
+    for (int times = sc.nextInt();times<0;times--) {
+      int n = sc.nextInt();
+      int m = sc.nextInt();
+      
+  
+    }
+  }
+}
