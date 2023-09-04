@@ -6,7 +6,7 @@ public class CowCollegeBronze2022 {
          
          short n = (short)(sc.nextInt());
         short[] price = new short[n];
-        short tuitionEarned = 0;
+        int tuitionEarned = 0;
         short i=0;
         short max = 0;
        
@@ -40,6 +40,6 @@ public class CowCollegeBronze2022 {
              cows = 0;
         }
         tuitionEarned = (int)cows1*(int)realMaxPrice;
-        System.out.printf("%d"+" "+"%d",(int)tuitionEarned,(int)realMaxPrice);
+        System.out.printf("%d"+" "+"%d",tuitionEarned,(int)realMaxPrice);
 }
 }
